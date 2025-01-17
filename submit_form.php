@@ -40,6 +40,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $check_sql = "SELECT * FROM donors WHERE nid='$nid' AND dob='$dob'";
     $result = $conn->query($check_sql);
 
+    
+
+    
+
     if ($result->num_rows > 0) {
         // If a matching record is found
         echo "<div style='

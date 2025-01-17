@@ -38,8 +38,18 @@ function validateForm(event) {
      displayError("email", "Please enter a valid email address.");
      isValid = false;
  }
+  
 
+ 
+    // Mobile number validation (for Bangladeshi number)
+    const mobileField = document.querySelector("input[name='contact_number']");
+    const mobileValue = mobileField ? mobileField.value.trim() : '';
+    const mobilePattern = /^01\d{9}$/; 
 
+    if (mobileValue && !mobilePattern.test(mobileValue)) {
+        displayError("contact_number", "Please enter a valid Bangladeshi mobile number (11 digits, starting with 01).");
+        isValid = false;
+    }
    // Password validation
    const passwordField = document.querySelector("input[name='password']");
    const confirmPasswordField = document.querySelector("input[name='confirm_password']");
