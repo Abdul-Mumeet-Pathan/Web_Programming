@@ -39,6 +39,44 @@ function validateForm(event) {
      isValid = false;
  }
 
+
+   // Password validation
+   const passwordField = document.querySelector("input[name='password']");
+   const confirmPasswordField = document.querySelector("input[name='confirm_password']");
+   const password = passwordField ? passwordField.value.trim() : '';
+   const confirmPassword = confirmPasswordField ? confirmPasswordField.value.trim() : '';
+
+   const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,20}$/;
+
+   if (!password) {
+       displayError("password", "Password is required.");
+       isValid = false;
+   } else if (!passwordPattern.test(password)) {
+       displayError("password", "Password must contain at least one uppercase letter, one lowercase letter, and one number. It should be between 8 and 20 characters long.");
+       isValid = false;
+   }
+
+   // Confirm Password validation
+   if (!confirmPassword) {
+       displayError("confirm_password", "Please confirm your password.");
+       isValid = false;
+   } else if (password !== confirmPassword) {
+       displayError("confirm_password", "Passwords do not match.");
+       isValid = false;
+   }
+
+   // Prevent paste in password fields
+   passwordField.addEventListener("paste", function(e) {
+       e.preventDefault();
+       displayError("password", "Pasting is not allowed in the password field.");
+   });
+
+   confirmPasswordField.addEventListener("paste", function(e) {
+       e.preventDefault();
+       displayError("confirm_password", "Pasting is not allowed in the confirm password field.");
+   });
+
+   
  // If not valid, prevent form submission
  if (!isValid) {
      event.preventDefault();
