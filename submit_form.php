@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             '>
                 <h1 style='color: #333; font-size: 28px;'>Good News !!! You are already a blood donor!</h1>
                 <!-- Visit Website Button -->
-                <a href=index.html' style='
+                <a href='index.html' style='
                         display: inline-block;
                         margin-top: 20px;
                         background-color: #e74c3c; 
@@ -92,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                         transition: background-color 0.3s ease;
                     ' onmouseover='this.style.backgroundColor = \"#c0392b\";' onmouseout='this.style.backgroundColor = \"#e74c3c\";'>
-                    Visit Website
+                    Sign in 
                 </a>
             </div>
           </div>";
@@ -137,7 +137,7 @@ if ($conn->query($sql) === TRUE) {
             '>
                 <h1 style='color: #333; font-size: 28px;'>Congratulations! You are now a blood donor!</h1>
                 <!-- Visit Website Button -->
-                <a href=index.html' style='
+                <a href='index.html' style='
                         display: inline-block;
                         margin-top: 20px;
                         background-color: #e74c3c; 
