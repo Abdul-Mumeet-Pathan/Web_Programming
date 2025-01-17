@@ -32,12 +32,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $anemia = $conn->real_escape_string($_POST['anemia']);
     $cardiac_patient = $conn->real_escape_string($_POST['cardiac_patient']);
     $under_medication = $conn->real_escape_string($_POST['under_medication']);
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Secure password storage
-    $confirm_password = password_hash($_POST['confirm_password'], PASSWORD_DEFAULT);
+    $password = trim($_POST['password'], PASSWORD_DEFAULT); // Secure password storage
+    $confirm_password = trim($_POST['confirm_password'], PASSWORD_DEFAULT);
 
     // Insert data into the table
     $sql = "INSERT INTO donors (name, nid, dob, email, gender, contact_number, address, blood_type, height, weight, donated_blood_before, allergy_details, serious_disease_history, anemia, cardiac_patient, under_medication, password, confirm_password)
     VALUES ('$name', '$nid', '$dob', '$email', '$gender', '$contact_number', '$address', '$blood_type', $height, $weight, '$donated_blood_before', '$allergy_details', '$serious_disease_history', '$anemia', '$cardiac_patient', '$under_medication', '$password', '$confirm_password')";
+
+   
 
 if ($conn->query($sql) === TRUE) {
     echo "<div style='
