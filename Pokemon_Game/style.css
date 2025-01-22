@@ -1,0 +1,304 @@
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a4731;
+    color: #fff;
+    background-attachment: fixed; /* Parallax effect */
+    background-image: url('https://img.freepik.com/premium-photo/abstract-green-background-abstract-wave-background-with-green-color_692702-13741.jpg'); /* Replace with a cool background */
+    background-size: cover;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(46, 89, 55, 0.8); /* Transparent background for header */
+}
+
+/* Logo Container Styling */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, rgba(8, 123, 16, 0.9), rgba(23, 176, 128, 0.9));
+    box-shadow: 0 0 15px rgba(0, 255, 100, 0.6), 0 0 30px rgba(0, 255, 150, 0.4), 0 0 45px rgba(0, 255, 200, 0.2);
+    animation: pulse 2s infinite;
+    margin-top: 50px;
+}
+
+/* Pokémon Image Styling */
+.pokemon-image {
+    width: 40%;
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 255, 100, 0.6), 0 0 20px rgba(23, 176, 128, 0.8), 0 0 30px rgba(0, 255, 200, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pokemon-image:hover {
+    
+    box-shadow: 0 0 15px rgba(0, 255, 100, 0.8), 0 0 30px rgba(23, 176, 128, 0.6), 0 0 45px rgba(0, 255, 200, 0.4);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(0, 255, 100, 0.6), 0 0 30px rgba(0, 255, 150, 0.4), 0 0 45px rgba(0, 255, 200, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(0, 255, 150, 0.8), 0 0 40px rgba(0, 255, 200, 0.6), 0 0 60px rgba(0, 255, 255, 0.4);
+    }
+}
+
+/* Sliding Section */
+/* Sliding Section */
+/* Slider container styling */
+.slider {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Increased the gap between buttons */
+    background: linear-gradient(135deg, rgba(8, 123, 16, 0.9), rgba(23, 176, 128, 0.9));
+    box-shadow: 0 0 15px rgba(0, 255, 100, 0.6), 0 0 30px rgba(0, 255, 150, 0.4), 0 0 45px rgba(0, 255, 200, 0.2);
+}
+
+/* Button and Anchor styling */
+.slider button, .slider .button {
+    background: linear-gradient(145deg, #34d399, #2d7d44); /* Green gradient for cool effect */
+    color: #fff;
+    padding: 25px 50px; /* Made buttons much bigger */
+    border: none;
+    border-radius: 30px; /* More rounded corners */
+    font-size: 1.6rem; /* Larger font size */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    cursor: pointer; /* Change cursor on hover */
+    text-decoration: none; /* Remove underline from anchor tag */
+    display: inline-block; /* Ensure anchor behaves like a button */
+    text-align: center; /* Center the text inside the button */
+    background: linear-gradient(135deg, rgba(8, 123, 16, 0.9), rgba(23, 176, 128, 0.9));
+    box-shadow: 0 0 15px rgba(0, 255, 100, 0.6), 0 0 30px rgba(0, 255, 150, 0.4), 0 0 45px rgba(0, 255, 200, 0.2);
+}
+
+/* Button Hover Effect */
+.slider button:hover, .slider .button:hover {
+    background: linear-gradient(145deg, #7bdb89, #3a9b5a); /* Lighter green gradient */
+    color: #fff;
+    transform: scale(1.1); /* Slight increase in size */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    background: linear-gradient(135deg, rgba(8, 123, 16, 0.9), rgba(23, 176, 128, 0.9));
+    box-shadow: 0 0 15px rgba(0, 255, 100, 0.6), 0 0 30px rgba(0, 255, 150, 0.4), 0 0 45px rgba(0, 255, 200, 0.2);
+}
+
+/* Cool Neon Glow Effect on Hover */
+.slider button:hover::before, .slider .button:hover::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 35px; /* Rounded corners for the glow */
+    z-index: -1;
+    animation: neonGlow 1.5s infinite alternate; /* Neon glow animation */
+    background: linear-gradient(135deg, rgba(8, 123, 16, 0.9), rgba(23, 176, 128, 0.9));
+    box-shadow: 0 0 15px rgba(0, 255, 100, 0.6), 0 0 30px rgba(0, 255, 150, 0.4), 0 0 45px rgba(0, 255, 200, 0.2);
+}
+
+/* Neon Glow Animation */
+@keyframes neonGlow {
+    0% {
+        box-shadow: 0 0 15px 5px rgba(79, 200, 120, 1);
+    }
+    100% {
+        box-shadow: 0 0 25px 15px rgba(79, 200, 120, 0.7);
+    }
+}
+
+/* Focus effect with Glow */
+.slider button:focus, .slider .button:focus {
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 25px rgba(79, 200, 120, 0.8); /* Intense glow when focused */
+}
+
+/* Extra cool hover transformation */
+
+
+/* Video Container */
+.video-container {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.video-container iframe {
+    width: 80%;
+    height: 450px;
+    border-radius: 10px;
+    border: 5px solid #51c76e;
+    background: linear-gradient(135deg, rgba(8, 123, 16, 0.9), rgba(23, 176, 128, 0.9));
+    box-shadow: 0 0 15px rgba(0, 255, 100, 0.6), 0 0 30px rgba(0, 255, 150, 0.4), 0 0 45px rgba(0, 255, 200, 0.2);
+}
+/* Image Section Styling */
+.image-section {
+    margin: 40px 0; /* Adds space above and below the image */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    position: relative; /* Allows for overlay effects */
+    overflow: hidden; /* Ensures no content is visible outside the container */
+}
+
+/* Image Hover and Animation Effects */
+.image-before-slider {
+    width: 80%;  /* Adjust this value as needed */
+    max-width: 800px; /* Ensures the image doesn't get too big */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 15px; /* Rounded corners for the image */
+    transition: transform 0.5s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    background: linear-gradient(135deg, rgba(8, 123, 16, 0.9), rgba(23, 176, 128, 0.9));
+    box-shadow: 0 0 15px rgba(0, 255, 100, 0.6), 0 0 30px rgba(0, 255, 150, 0.4), 0 0 45px rgba(0, 255, 200, 0.2);
+}
+
+/* Image Hover Effect */
+.image-before-slider:hover {
+    transform: scale(1.05); /* Slightly increase the size on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    filter: brightness(1.2); /* Increase brightness on hover */
+}
+
+/* Image Section Hover Overlay Effect */
+.image-section:hover::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2); /* Overlay with opacity */
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in effect */
+    border-radius: 15px;
+}
+
+/* Image Section Animation on Hover */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Optional: A small parallax effect */
+.image-section {
+    perspective: 1000px; /* Adds depth for 3D effect */
+}
+
+.image-before-slider {
+    transition: transform 0.5s ease;
+}
+
+.image-section:hover .image-before-slider {
+    transform: translateZ(20px); /* Makes image appear closer */
+}
+
+/* Optional: Add a subtle glow effect around the image */
+.image-before-slider:focus {
+    outline: none; /* Remove the default focus outline */
+    box-shadow: 0 0 25px rgba(79, 200, 120, 1); /* Intense glow */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2e5937;
+    color: #fff;
+    padding: 30px 20px;  /* Increased padding for more space */
+    text-align: center;
+    font-size: 1.4rem; /* Larger font size for better readability */
+    border-top: 5px solid #7bdb89; /* Added a border at the top */
+    position: relative;
+}
+
+/* Social Links Container */
+footer .social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 20px;
+}
+
+/* Social Link Styling */
+footer .social-links a {
+    color: #fff;
+    font-size: 1.6rem; /* Increased font size */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+/* Social Link Hover Effect */
+footer .social-links a:hover {
+    color: #7bdb89; /* Lighter green on hover */
+    transform: translateY(-5px); /* Slight movement effect */
+}
+
+/* Icon Hover Glow Effect */
+footer .social-links a:hover::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    background: rgba(123, 219, 137, 0.2); /* Light green glow */
+    box-shadow: 0 0 20px rgba(123, 219, 137, 0.5);
+    z-index: -1; /* Behind the icon */
+}
+
+/* Footer Bottom Text Styling */
+footer p {
+    font-size: 1.7rem; /* Slightly smaller for the copyright text */
+    margin-top: 20px;
+    color: #bbb; /* Lighter color for the text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slider {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .pokemon-image {
+        width: 90%;
+    }
+
+    /* Footer styling on mobile */
+    footer {
+        font-size: 1.2rem; /* Slightly smaller font size for mobile */
+        padding: 20px; /* Reduced padding */
+    }
+
+    footer .social-links {
+        flex-direction: column; /* Stack the social links vertically on smaller screens */
+        gap: 15px;
+    }
+}
