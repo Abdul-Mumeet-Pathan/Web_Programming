@@ -1,30 +1,60 @@
-#header{
+/* Header Styling */
+#header {
     color: rgb(136, 57, 57);
     background-color: #ffffff;
     text-align: right;
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     padding: 20px;
-    
-}
-#header a{
-    
-    color: black;
-    font-size: 200%;
-    margin: left 2px;
-    margin-right: 5%;
-   
-    
 }
 
+#header a {
+    color: black;
+    font-size: 200%;
+    margin-left: 2px;  /* Fixed mistake */
+    margin-right: 5%;
+}
+
+/* Google Logo Section */
 #google {
     width: 500px;
     height: 300px;
-    background-color: aqua;
-    background-image: url(google.png);
+    
+    background-image: url("google.png");  /* Added quotes */
     background-size: contain;
     background-position: center;
-    margin-left: 40%;
-    margin-top: 5%;
+    background-repeat: no-repeat; /* Added to prevent tiling */
+    margin: 5% auto;  /* Center align */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+/* Search Box & Button */
+#search-box {
+    display: inline-flex; /* Fixed missing semicolon */
+    width: 400px; /* Adjusted size */
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #dcdcdc;
+    border-radius: 24px;
+    outline: none;
+    margin-top: 70%; /* Adjusted margin */
+}
+
+/* Search Button */
+#search-btn {
+    padding: 10px 15px;
+    font-size: 18px;
+    border: none;
+    background-color: #4285F4;
+    color: white;
+    border-radius: 24px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 70%;
+}
+
+#search-btn:hover {
+    background-color: #357ae8;
 }
