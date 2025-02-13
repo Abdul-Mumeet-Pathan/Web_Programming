@@ -1,4 +1,30 @@
 #header{
-    color: aqua;
-    background-color: brown;
+    color: rgb(136, 57, 57);
+    background-color: #ffffff;
+    text-align: right;
+    display: flex;
+    justify-content:flex-end;
+    padding: 20px;
+    
+}
+#header a{
+    
+    color: black;
+    font-size: 200%;
+    margin: left 2px;
+    margin-right: 5%;
+   
+    
+}
+
+#google {
+    width: 500px;
+    height: 300px;
+    background-color: aqua;
+    background-image: url(google.png);
+    background-size: contain;
+    background-position: center;
+    margin-left: 40%;
+    margin-top: 5%;
+
 }
