@@ -9,3 +9,7 @@
   }
 5. npx tailwindcss init 
 6. content e * 
+
+
+Second Method : 
+install tailwind version 3.14
